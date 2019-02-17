@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="BattleBomberMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
+                                <rect key="frame" x="72" y="11" width="228" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-yQ-eh1">
+                                <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="9Xq-fH-zwk"/>
+                                    <constraint firstAttribute="width" constant="59" id="vkJ-EL-Phz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHg-nB-jQk">
+                                <rect key="frame" x="20" y="448" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0Le-8V-WpR"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="iba_submitMove" destination="ObA-dk-sSI" eventType="touchUpInside" id="Gkb-m3-HVi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5c-lu-mND">
+                                <rect key="frame" x="72" y="34" width="228" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <skView multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="GameScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="zpQ-tg-qrc">
+                                <rect key="frame" x="0.0" y="67" width="320" height="373"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zpQ-tg-qrc" firstAttribute="trailing" secondItem="LDy-ih-0nr" secondAttribute="trailing" id="0Hj-Ik-Uo1"/>
+                            <constraint firstItem="Pe0-yQ-eh1" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="1gY-m7-JPV"/>
+                            <constraint firstItem="Pe0-yQ-eh1" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="9eK-nD-Qtf"/>
+                            <constraint firstItem="ZHg-nB-jQk" firstAttribute="top" secondItem="zpQ-tg-qrc" secondAttribute="bottom" constant="8" id="F6I-Pc-aVt"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="ZHg-nB-jQk" secondAttribute="bottom" constant="20" id="Wxo-A3-70c"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="ZHg-nB-jQk" secondAttribute="trailing" constant="20" id="XhT-AT-MTe"/>
+                            <constraint firstItem="zpQ-tg-qrc" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="bTe-QD-s6f"/>
+                            <constraint firstItem="zpQ-tg-qrc" firstAttribute="top" secondItem="Pe0-yQ-eh1" secondAttribute="bottom" constant="8" id="hVO-Py-qd5"/>
+                            <constraint firstItem="ZHg-nB-jQk" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="20" id="wHF-mU-a36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="ibo_publicKey" destination="d1e-fi-ked" id="xR4-gr-4Ai"/>
+                        <outlet property="ibo_qrCode" destination="Pe0-yQ-eh1" id="L2K-ch-FaO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.799999999999997" y="26.986506746626688"/>
+        </scene>
+    </scenes>
+</document>
