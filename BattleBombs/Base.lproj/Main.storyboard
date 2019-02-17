@@ -66,7 +66,7 @@
                                     <action selector="iba_initializeCeler" destination="BYZ-38-t0r" eventType="touchUpInside" id="LA0-Mw-df4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWK-dU-bNg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWK-dU-bNg">
                                 <rect key="frame" x="133" y="310" width="109" height="30"/>
                                 <state key="normal" title="Update Balance"/>
                                 <connections>
@@ -77,6 +77,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BA0-NO-7qr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9Qp-MX-Dfa"/>
+                            <constraint firstItem="nWK-dU-bNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AFs-CT-Utv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BA0-NO-7qr" secondAttribute="trailing" constant="40" id="O0B-2Y-jea"/>
                             <constraint firstItem="tbd-AF-xFv" firstAttribute="top" secondItem="BA0-NO-7qr" secondAttribute="bottom" constant="20" id="OZC-8g-usn"/>
                             <constraint firstItem="tKf-8c-VWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="POn-n9-Sdj"/>
