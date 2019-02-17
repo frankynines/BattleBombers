@@ -9,46 +9,27 @@
 import SpriteKit
 import Foundation
 
-protocol BrianProtocol {
-    func didChangeState()
+protocol GameSceneProtocol {
+    func did_FinishSettingUpGame()
+    func did_WinGame()
+    func did_loseGame()
 }
 
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    var protocolDelegate: BrianProtocol?
+    var protocolDelegate: GameSceneProtocol?
     
     var animationTexture = [SKTexture]()
     var bombSprites = [GrassSprite]()
     
     var plantedBombs = 0
     var hits = 0
+    var numberOfPlants = 4
+    var numberOfMoves = 3
     var gameSetup = true
-    
-    var gameState = [
-            ["isBomb": false,
-             "isHit": false,
-             "isMiss": false],
-            
-            ["isBomb": false,
-             "isHit": false,
-             "isMiss": false],
-            
-            ["isBomb": false,
-             "isHit": false,
-             "isMiss": false],
-            
-            ["isBomb": false,
-             "isHit": false,
-             "isMiss": false],
-            
-            ["isBomb": false,
-             "isHit": false,
-             "isMiss": false]
-   ]
-    
-    
+    var gameOver = false
     override func didMove(to view: SKView) {
     
         for i in 0...9{
@@ -67,8 +48,8 @@ class GameScene: SKScene {
             self.drawTile(position: point, tag: i)
         }
         
-        if self.gameSetup {
-            print("New Game")
+        if !self.gameSetup {
+//            self.loadGameState()
         }
         
     }
@@ -89,8 +70,11 @@ class GameScene: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
         if let touch = touches.first {
+            if gameOver {
+                return
+            }
+            
             let location = touch.location(in: self)
             let node = self.nodes(at: location).first
             
@@ -98,23 +82,19 @@ class GameScene: SKScene {
                 
                 let object = node as! GrassSprite
                 let sprite = self.bombSprites[object.tag!]
-                print(sprite.tag)
-                print(sprite.isBomb)
-                print(sprite.spriteState)
 
                 if (gameSetup == true) {
                     if !sprite.isBomb! {
-                        if plantedBombs < 3 {
+                        if plantedBombs < numberOfPlants {
                             plantedBombs += 1
                             sprite.texture = SKTexture(image: UIImage(named: "plot_plant.png")!)
                             sprite.isBomb = true
                         }
-                        if plantedBombs == 3 {
+                        if plantedBombs == numberOfPlants {
                             self.gameSetup = false
-                            // SHOULD SEND INVITE
+                            self.protocolDelegate?.did_FinishSettingUpGame()
                         }
                     }
-                    
                     
                 } else if (gameSetup == false) {
                     //FULL GAME PLAY
@@ -126,22 +106,25 @@ class GameScene: SKScene {
                         sprite.spriteState = 2
                         self.animateExplosion(position: (node?.position)!)
                         self.hits += 1
-                        sprite.texture = SKTexture(image: UIImage(named: "plot_hit.png")!)
-
-                        if (hits == 3) {
-                            print("GAME OVER WIN")
-                        }
+                        sprite.setState(state: 2)
                         
+                        if (self.hits == numberOfMoves) {
+                            gameOver = true
+                            self.protocolDelegate?.did_loseGame()
+                        }
                     } else {
                         if (sprite.spriteState == 1) {
                             return // NO TURN
                         }
-                        sprite.texture = SKTexture(image: UIImage(named: "plot_miss.png")!)
+                        if (sprite.spriteState == 2) {
+                            return // NO TURN
+                        }
+                        sprite.setState(state: 1)
                         sprite.spriteState = 1
-                        //MISS, Send Message
+                        
+                        self.protocolDelegate?.did_WinGame()
                     }
                 }
-                
                 
                 self.saveGameStates()
                 
@@ -165,15 +148,43 @@ class GameScene: SKScene {
     }
     
     
-    func loadGameState() {
-        //        This method should loop through all of the bombSprites and set thier state according to previous
+    func loadGameState(loadState:String) {
+        self.gameSetup = false
+        
+        for (i, bomb) in self.bombSprites.enumerated() {
+            let isBomb = self.getQueryStringParameter(url: loadState, param: "\(i)isBomb")
+            let spriteState = self.getQueryStringParameter(url: loadState, param: "\(i)state")
+            
+            bomb.isBomb = isBomb?.bool
+            bomb.spriteState = Int(spriteState!)!
+
+        }
+        
+//        for (i, state) in loadState.enumerated() {
+//            if state[1] as! String == "2" {
+//                self.hits += 1
+//            }
+//            let tile = self.bombSprites[i]
+//            tile.isBomb = ((state[0] as! String).bool)
+//            tile.setState(state: Int(state[1] as! String)!)
+//        }
+
+    }
+    func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
     
     
-    func saveGameStates() {
-        //This should update global Game state and Return
-//        print(self.bombSprites)
-       
+    func saveGameStates() -> [String:Any] {
+        var saveState = [String:Any]()
+        for (i, bomb) in self.bombSprites.enumerated() {
+            saveState["\(i)isBomb"] = bomb.isBomb?.description
+            saveState["\(i)state"] = String(bomb.spriteState)
+        }
+        
+        return saveState
+
     }
 }
 
@@ -186,11 +197,39 @@ class GrassSprite: SKSpriteNode {
         self.position = position
         
     }
+    
+    func setState(state:Int) {
+        self.spriteState = state
+        
+        if (state == 0) {
+            self.texture = SKTexture(image: UIImage(named: "plot_blank.png")!)
+        }
+        
+        if (state == 1) {
+            self.texture = SKTexture(image: UIImage(named: "plot_miss.png")!)
+        }
+        
+        if (state == 2) {
+            self.texture = SKTexture(image: UIImage(named: "plot_hit.png")!)
+        }
+        
+    }
 
 }
 
 
 
 
-
+extension String {
+    var bool: Bool? {
+        switch self.lowercased() {
+        case "true", "t", "yes", "y", "1":
+            return true
+        case "false", "f", "no", "n", "0":
+            return false
+        default:
+            return nil
+        }
+    }
+}
 

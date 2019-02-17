@@ -12,27 +12,29 @@ import Celer
 import QRCode
 import SpriteKit
 
-class MessagesViewController: MSMessagesAppViewController, BrianProtocol {
-    
-
+class MessagesViewController: MSMessagesAppViewController, GameSceneProtocol {
+   
+   
     @IBOutlet weak var ibo_qrCode:UIImageView?
     @IBOutlet weak var ibo_publicKey:UILabel?
 
     var ibo_explosion:UIImageView?
     var gameScene:GameScene?
+    var currentPlayer = "1"
+    
     @IBOutlet var ibo_spriteView:SKView?
+    var session:MSSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.iba_createWallet()
-//        if let scene = SKScene(fileNamed: "GameScene") {
-//            // Set the scale mode to scale to fit the window
-//            print("SCENE")
-//            self.gameScene = scene as! GameScene
-//            self.gameScene?.view = self.ibo
-//        }
-
+        if let scene = GameScene(fileNamed: "GameScene") {
+            // Set the scale mode to scale to fit the window
+            self.gameScene = scene
+            self.gameScene?.protocolDelegate = self
+            self.ibo_spriteView?.presentScene(scene)
+        }
     }
     
     func didChangeState() {
@@ -59,15 +61,90 @@ class MessagesViewController: MSMessagesAppViewController, BrianProtocol {
     
     }
     
-    @IBAction func iba_submitMove() {
-        self.gameScene?.saveGameStates()
+    func prepareUrl(state: [String:Any]) -> URL {
+        var urlComponents = URLComponents()
         
+        urlComponents.queryItems = []
+        
+        for item in state {
+
+            let item = URLQueryItem(name: item.key, value:(item.value as! String))
+            urlComponents.queryItems?.append(item)
+        }
+//        print("URL: ", urlComponents.url!)
+        return urlComponents.url!
+    }
+    
+    @IBAction func iba_submitMove() {
+        let savedStateArray = self.gameScene?.saveGameStates()
+
+        
+        let gameURL = prepareUrl(state:savedStateArray!)
+    
         let layout = MSMessageTemplateLayout()
         layout.image = UIImage(named: "bomb.png")
+        layout.caption = "Let's play battle bombers"
+        layout.subcaption = "Can you find the Bufficorn?"
+        let message = MSMessage()
+        message.url = gameURL
+        message.layout = layout
+
+        self.activeConversation!.insert(message) { error in
+            if let error = error {
+                print(error)
+            }
+        }
+
+        self.dismiss()
+    }
+    
+    func getScreenshot(scene: SKScene) -> UIImage {
+        let snapshotView = self.ibo_spriteView!.snapshotView(afterScreenUpdates: true)
+        let bounds = self.ibo_spriteView?.bounds
+        
+        UIGraphicsBeginImageContextWithOptions(bounds!.size, false, 0)
+        snapshotView?.drawHierarchy(in: bounds!, afterScreenUpdates: true)
+        let screenshotImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return screenshotImage;
+    }
+    
+    func did_FinishSettingUpGame() {
+        print("GAME READY")
+        self.iba_submitMove()
+    }
+    
+    func did_loseGame() {
+        print("MOVE FINISH")
+        let alert = UIAlertController(title: "You Lost", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true) {
+            self.sendMessageWithSummary(string: "I Lost, Heres your Eth!")
+            print("I lost")
+
+        }
+    }
+    
+    func did_WinGame() {
+        let alert = UIAlertController(title: "You Won!", message: "You found the Bufficorn", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (action) in
+            self.sendMessageWithSummary(string: "I won, Pay Up!")
+            print("I won")
+        }))
+        self.present(alert, animated: true) {
+        
+        }
+    }
+    
+    func sendMessageWithSummary(string:String) {
+        let layout = MSMessageTemplateLayout()
         
         let message = MSMessage()
-        message.url = URL(string: "WOW")
         message.layout = layout
+        message.summaryText = string
+        print("sumtext", message);
         
         self.activeConversation!.insert(message) { error in
             if let error = error {
@@ -77,14 +154,21 @@ class MessagesViewController: MSMessagesAppViewController, BrianProtocol {
         
         self.dismiss()
     }
+    
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
-        // Called when the extension is about to move from the inactive to active state.
-        // This will happen when the extension is about to present UI.
         
-        // Use this method to configure the extension and restore previously stored state.
+        if let messageURL = conversation.selectedMessage?.url {
+            print(messageURL)
+            self.gameScene?.loadGameState(loadState: messageURL.absoluteString)
+        } else {
+            
+            //NEW GAME
+        }
     }
+    
+    
     
     override func didResignActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the active to inactive state.

@@ -45,7 +45,7 @@ class HomeViewController: UIViewController, CelerGroupClientCallback {
             print(EtherWallet.account.address)
             ibo_qrCode?.image = qrCode!.image
             
-            self.updateWalletBalance()
+            self.iba_updateWalletBalance()
             
         } catch {
             print(error)
@@ -53,7 +53,7 @@ class HomeViewController: UIViewController, CelerGroupClientCallback {
         
     }
     
-    func updateWalletBalance() {
+    @IBAction func iba_updateWalletBalance() {
         let balance = try? EtherWallet.balance.etherBalanceSync()
         self.ibo_balance?.text = balance
     }
@@ -94,19 +94,14 @@ class HomeViewController: UIViewController, CelerGroupClientCallback {
     @IBAction func iba_checkCelerBalance() {
         let networkBalance = CelerClientAPIHelper.shared.checkBalance()
         self.ibo_networkBalance?.text = networkBalance.0
-        
     }
-    
-    
     
     @IBAction func iba_createCelerGame() {
         initializeGameClient()
         
         groupClient?.createGameFrom(userAddress: EtherWallet.account.address!, withStake: clientSideDepositAmount, forNumberOfPlayers: 2, errorHandler: { (error) in
                 print(error)
-        
         })
-
     }
     
     func  initializeGameClient() {

@@ -1004,6 +1004,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBombs/BattleBombs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BattleBombs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1026,6 +1027,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBombs/BattleBombs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BattleBombs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1133,6 +1135,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBomberMessage/BattleBomberMessage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BattleBomberMessage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1156,6 +1159,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBomberMessage/BattleBomberMessage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BattleBomberMessage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
