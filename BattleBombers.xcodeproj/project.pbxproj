@@ -1,0 +1,1253 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B192993EA8E60C1FA936C8C /* Pods_BattleBombersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A684A034377B2180C14DE2A0 /* Pods_BattleBombersUITests.framework */; };
+		3022315CB99B00F4FB287B13 /* Pods_BattleBombers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02A35A855F0A031739E1E6B /* Pods_BattleBombers.framework */; };
+		38758AD8221F8FC8005FBBE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758AD7221F8FC8005FBBE8 /* AppDelegate.swift */; };
+		38758ADA221F8FC8005FBBE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758AD9221F8FC8005FBBE8 /* ViewController.swift */; };
+		38758ADD221F8FC8005FBBE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38758ADB221F8FC8005FBBE8 /* Main.storyboard */; };
+		38758ADF221F8FC9005FBBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38758ADE221F8FC9005FBBE8 /* Assets.xcassets */; };
+		38758AE2221F8FC9005FBBE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38758AE0221F8FC9005FBBE8 /* LaunchScreen.storyboard */; };
+		38758AED221F8FC9005FBBE8 /* BattleBombersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758AEC221F8FC9005FBBE8 /* BattleBombersTests.swift */; };
+		38758AF8221F8FC9005FBBE8 /* BattleBombersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758AF7221F8FC9005FBBE8 /* BattleBombersUITests.swift */; };
+		38758B34221F92E9005FBBE8 /* plot_plant.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B24221F92E9005FBBE8 /* plot_plant.png */; };
+		38758B35221F92E9005FBBE8 /* plot_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B25221F92E9005FBBE8 /* plot_hit.png */; };
+		38758B36221F92E9005FBBE8 /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B26221F92E9005FBBE8 /* bomb.png */; };
+		38758B37221F92E9005FBBE8 /* plot_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B27221F92E9005FBBE8 /* plot_blank.png */; };
+		38758B38221F92E9005FBBE8 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B29221F92E9005FBBE8 /* 8.png */; };
+		38758B39221F92E9005FBBE8 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2A221F92E9005FBBE8 /* 9.png */; };
+		38758B3A221F92E9005FBBE8 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2B221F92E9005FBBE8 /* 4.png */; };
+		38758B3B221F92E9005FBBE8 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2C221F92E9005FBBE8 /* 5.png */; };
+		38758B3C221F92E9005FBBE8 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2D221F92E9005FBBE8 /* 7.png */; };
+		38758B3D221F92E9005FBBE8 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2E221F92E9005FBBE8 /* 6.png */; };
+		38758B3E221F92E9005FBBE8 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2F221F92E9005FBBE8 /* 2.png */; };
+		38758B3F221F92E9005FBBE8 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B30221F92E9005FBBE8 /* 3.png */; };
+		38758B40221F92E9005FBBE8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B31221F92E9005FBBE8 /* 1.png */; };
+		38758B41221F92E9005FBBE8 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B32221F92E9005FBBE8 /* 0.png */; };
+		38758B42221F92E9005FBBE8 /* plot_miss.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B33221F92E9005FBBE8 /* plot_miss.png */; };
+		38758B44221F9E4B005FBBE8 /* KeystoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B43221F9E4B005FBBE8 /* KeystoreHelper.swift */; };
+		38758B55221FBB19005FBBE8 /* WalletError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B47221FBB19005FBBE8 /* WalletError.swift */; };
+		38758B56221FBB19005FBBE8 /* EtherWalletTestnets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B48221FBB19005FBBE8 /* EtherWalletTestnets.swift */; };
+		38758B57221FBB19005FBBE8 /* EtherWallet+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B49221FBB19005FBBE8 /* EtherWallet+Util.swift */; };
+		38758B58221FBB19005FBBE8 /* EtherWallet+Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4A221FBB19005FBBE8 /* EtherWallet+Balance.swift */; };
+		38758B59221FBB19005FBBE8 /* EtherWallet+Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4B221FBB19005FBBE8 /* EtherWallet+Transaction.swift */; };
+		38758B5A221FBB19005FBBE8 /* EtherWallet+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4C221FBB19005FBBE8 /* EtherWallet+Info.swift */; };
+		38758B5B221FBB19005FBBE8 /* EtherWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4D221FBB19005FBBE8 /* EtherWallet.swift */; };
+		38758B5C221FBB19005FBBE8 /* EtherWallet+History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4E221FBB19005FBBE8 /* EtherWallet+History.swift */; };
+		38758B5D221FBB19005FBBE8 /* EtherWallet+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4F221FBB19005FBBE8 /* EtherWallet+Account.swift */; };
+		38758B5E221FBB19005FBBE8 /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B51221FBB19005FBBE8 /* TransactionData.swift */; };
+		38758B5F221FBB19005FBBE8 /* EthplorerAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B52221FBB19005FBBE8 /* EthplorerAPIResponse.swift */; };
+		38758B60221FBB19005FBBE8 /* GasStationAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B53221FBB19005FBBE8 /* GasStationAPIResponse.swift */; };
+		38758B61221FBB19005FBBE8 /* EtherscanAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B54221FBB19005FBBE8 /* EtherscanAPIResponse.swift */; };
+		38758B6822205685005FBBE8 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38758B6722205685005FBBE8 /* Messages.framework */; };
+		38758B6B22205685005FBBE8 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B6A22205685005FBBE8 /* MessagesViewController.swift */; };
+		38758B6E22205685005FBBE8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38758B6C22205685005FBBE8 /* MainInterface.storyboard */; };
+		38758B7022205686005FBBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38758B6F22205686005FBBE8 /* Assets.xcassets */; };
+		38758B7422205686005FBBE8 /* BattleBombersMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38758B6622205685005FBBE8 /* BattleBombersMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38758B7922205690005FBBE8 /* WalletError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B47221FBB19005FBBE8 /* WalletError.swift */; };
+		38758B7A22205690005FBBE8 /* EtherWalletTestnets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B48221FBB19005FBBE8 /* EtherWalletTestnets.swift */; };
+		38758B7B22205690005FBBE8 /* EtherWallet+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B49221FBB19005FBBE8 /* EtherWallet+Util.swift */; };
+		38758B7C22205690005FBBE8 /* EtherWallet+Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4A221FBB19005FBBE8 /* EtherWallet+Balance.swift */; };
+		38758B7D22205690005FBBE8 /* EtherWallet+Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4B221FBB19005FBBE8 /* EtherWallet+Transaction.swift */; };
+		38758B7E22205690005FBBE8 /* EtherWallet+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4C221FBB19005FBBE8 /* EtherWallet+Info.swift */; };
+		38758B7F22205690005FBBE8 /* EtherWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4D221FBB19005FBBE8 /* EtherWallet.swift */; };
+		38758B8022205690005FBBE8 /* EtherWallet+History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4E221FBB19005FBBE8 /* EtherWallet+History.swift */; };
+		38758B8122205690005FBBE8 /* EtherWallet+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B4F221FBB19005FBBE8 /* EtherWallet+Account.swift */; };
+		38758B8222205694005FBBE8 /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B51221FBB19005FBBE8 /* TransactionData.swift */; };
+		38758B8322205694005FBBE8 /* EthplorerAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B52221FBB19005FBBE8 /* EthplorerAPIResponse.swift */; };
+		38758B8422205694005FBBE8 /* GasStationAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B53221FBB19005FBBE8 /* GasStationAPIResponse.swift */; };
+		38758B8522205694005FBBE8 /* EtherscanAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B54221FBB19005FBBE8 /* EtherscanAPIResponse.swift */; };
+		38758B8622205694005FBBE8 /* KeystoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B43221F9E4B005FBBE8 /* KeystoreHelper.swift */; };
+		38758B8B222059B6005FBBE8 /* plot_plant.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B24221F92E9005FBBE8 /* plot_plant.png */; };
+		38758B8C222059B6005FBBE8 /* plot_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B25221F92E9005FBBE8 /* plot_hit.png */; };
+		38758B8D222059B6005FBBE8 /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B26221F92E9005FBBE8 /* bomb.png */; };
+		38758B8E222059B6005FBBE8 /* plot_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B27221F92E9005FBBE8 /* plot_blank.png */; };
+		38758B8F222059B6005FBBE8 /* plot_miss.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B33221F92E9005FBBE8 /* plot_miss.png */; };
+		38758B90222059BA005FBBE8 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B29221F92E9005FBBE8 /* 8.png */; };
+		38758B91222059BA005FBBE8 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2A221F92E9005FBBE8 /* 9.png */; };
+		38758B92222059BA005FBBE8 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2B221F92E9005FBBE8 /* 4.png */; };
+		38758B93222059BA005FBBE8 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2C221F92E9005FBBE8 /* 5.png */; };
+		38758B94222059BA005FBBE8 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2D221F92E9005FBBE8 /* 7.png */; };
+		38758B95222059BA005FBBE8 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2E221F92E9005FBBE8 /* 6.png */; };
+		38758B96222059BA005FBBE8 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B2F221F92E9005FBBE8 /* 2.png */; };
+		38758B97222059BA005FBBE8 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B30221F92E9005FBBE8 /* 3.png */; };
+		38758B98222059BA005FBBE8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B31221F92E9005FBBE8 /* 1.png */; };
+		38758B99222059BA005FBBE8 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758B32221F92E9005FBBE8 /* 0.png */; };
+		38758B9E22205B9A005FBBE8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38758B89222059A6005FBBE8 /* GameScene.swift */; };
+		38758B9F22205B9C005FBBE8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38758B9D222059E6005FBBE8 /* GameScene.sks */; };
+		38758BAD2220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA12220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@2x.png */; };
+		38758BAE2220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA22220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@3x.png */; };
+		38758BAF2220694F005FBBE8 /* Icon-Messages-App-iPadAir-67x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA32220694F005FBBE8 /* Icon-Messages-App-iPadAir-67x50@2x.png */; };
+		38758BB02220694F005FBBE8 /* Icon-Messages-Transcript-32x24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA42220694F005FBBE8 /* Icon-Messages-Transcript-32x24@2x.png */; };
+		38758BB12220694F005FBBE8 /* Icon-Settings-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA52220694F005FBBE8 /* Icon-Settings-29x29@2x.png */; };
+		38758BB22220694F005FBBE8 /* Icon-Messages-app-27x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA62220694F005FBBE8 /* Icon-Messages-app-27x20@3x.png */; };
+		38758BB32220694F005FBBE8 /* Icon-Settings-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA72220694F005FBBE8 /* Icon-Settings-29x29@3x.png */; };
+		38758BB42220694F005FBBE8 /* Icon-App-iTunes-1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA82220694F005FBBE8 /* Icon-App-iTunes-1024x1024.png */; };
+		38758BB52220694F005FBBE8 /* Icon-Messages-App-iPadAir-74x55@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BA92220694F005FBBE8 /* Icon-Messages-App-iPadAir-74x55@2x.png */; };
+		38758BB62220694F005FBBE8 /* Icon-Messages-AppStore-1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BAA2220694F005FBBE8 /* Icon-Messages-AppStore-1024x768.png */; };
+		38758BB72220694F005FBBE8 /* Icon-Messages-Transcript-32x24@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BAB2220694F005FBBE8 /* Icon-Messages-Transcript-32x24@3x.png */; };
+		38758BB82220694F005FBBE8 /* Icon-Messages-App-27x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38758BAC2220694F005FBBE8 /* Icon-Messages-App-27x20@2x.png */; };
+		56C12A55E0B08D2B9678D9B8 /* Pods_BattleBombersMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1236662603CFA16C1871D5C /* Pods_BattleBombersMessage.framework */; };
+		EC5DB9F94195C4CA7C0C997B /* Pods_BattleBombersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F019F75814781E4F8243F5A /* Pods_BattleBombersTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38758AE9221F8FC9005FBBE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38758ACC221F8FC8005FBBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38758AD3221F8FC8005FBBE8;
+			remoteInfo = BattleBombers;
+		};
+		38758AF4221F8FC9005FBBE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38758ACC221F8FC8005FBBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38758AD3221F8FC8005FBBE8;
+			remoteInfo = BattleBombers;
+		};
+		38758B7222205686005FBBE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38758ACC221F8FC8005FBBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38758B6522205685005FBBE8;
+			remoteInfo = BattleBombersMessage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38758B7822205686005FBBE8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38758B7422205686005FBBE8 /* BattleBombersMessage.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F019F75814781E4F8243F5A /* Pods_BattleBombersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBombersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA100BF23889ABBC67A7013 /* Pods-BattleBombers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombers.debug.xcconfig"; path = "Target Support Files/Pods-BattleBombers/Pods-BattleBombers.debug.xcconfig"; sourceTree = "<group>"; };
+		38758AD4221F8FC8005FBBE8 /* BattleBombers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleBombers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38758AD7221F8FC8005FBBE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38758AD9221F8FC8005FBBE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38758ADC221F8FC8005FBBE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38758ADE221F8FC9005FBBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38758AE1221F8FC9005FBBE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38758AE3221F8FC9005FBBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38758AE8221F8FC9005FBBE8 /* BattleBombersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleBombersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38758AEC221F8FC9005FBBE8 /* BattleBombersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleBombersTests.swift; sourceTree = "<group>"; };
+		38758AEE221F8FC9005FBBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38758AF3221F8FC9005FBBE8 /* BattleBombersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleBombersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38758AF7221F8FC9005FBBE8 /* BattleBombersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleBombersUITests.swift; sourceTree = "<group>"; };
+		38758AF9221F8FC9005FBBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38758B24221F92E9005FBBE8 /* plot_plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plot_plant.png; sourceTree = "<group>"; };
+		38758B25221F92E9005FBBE8 /* plot_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plot_hit.png; sourceTree = "<group>"; };
+		38758B26221F92E9005FBBE8 /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb.png; sourceTree = "<group>"; };
+		38758B27221F92E9005FBBE8 /* plot_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plot_blank.png; sourceTree = "<group>"; };
+		38758B29221F92E9005FBBE8 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		38758B2A221F92E9005FBBE8 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		38758B2B221F92E9005FBBE8 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		38758B2C221F92E9005FBBE8 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		38758B2D221F92E9005FBBE8 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		38758B2E221F92E9005FBBE8 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		38758B2F221F92E9005FBBE8 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		38758B30221F92E9005FBBE8 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		38758B31221F92E9005FBBE8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		38758B32221F92E9005FBBE8 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		38758B33221F92E9005FBBE8 /* plot_miss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plot_miss.png; sourceTree = "<group>"; };
+		38758B43221F9E4B005FBBE8 /* KeystoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeystoreHelper.swift; sourceTree = "<group>"; };
+		38758B47221FBB19005FBBE8 /* WalletError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletError.swift; sourceTree = "<group>"; };
+		38758B48221FBB19005FBBE8 /* EtherWalletTestnets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherWalletTestnets.swift; sourceTree = "<group>"; };
+		38758B49221FBB19005FBBE8 /* EtherWallet+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+Util.swift"; sourceTree = "<group>"; };
+		38758B4A221FBB19005FBBE8 /* EtherWallet+Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+Balance.swift"; sourceTree = "<group>"; };
+		38758B4B221FBB19005FBBE8 /* EtherWallet+Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+Transaction.swift"; sourceTree = "<group>"; };
+		38758B4C221FBB19005FBBE8 /* EtherWallet+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+Info.swift"; sourceTree = "<group>"; };
+		38758B4D221FBB19005FBBE8 /* EtherWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherWallet.swift; sourceTree = "<group>"; };
+		38758B4E221FBB19005FBBE8 /* EtherWallet+History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+History.swift"; sourceTree = "<group>"; };
+		38758B4F221FBB19005FBBE8 /* EtherWallet+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtherWallet+Account.swift"; sourceTree = "<group>"; };
+		38758B51221FBB19005FBBE8 /* TransactionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
+		38758B52221FBB19005FBBE8 /* EthplorerAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthplorerAPIResponse.swift; sourceTree = "<group>"; };
+		38758B53221FBB19005FBBE8 /* GasStationAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasStationAPIResponse.swift; sourceTree = "<group>"; };
+		38758B54221FBB19005FBBE8 /* EtherscanAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanAPIResponse.swift; sourceTree = "<group>"; };
+		38758B6622205685005FBBE8 /* BattleBombersMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BattleBombersMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		38758B6722205685005FBBE8 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		38758B6A22205685005FBBE8 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		38758B6D22205685005FBBE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		38758B6F22205686005FBBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38758B7122205686005FBBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38758B8722205736005FBBE8 /* BattleBombersMessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BattleBombersMessage.entitlements; sourceTree = "<group>"; };
+		38758B882220573B005FBBE8 /* BattleBombers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BattleBombers.entitlements; sourceTree = "<group>"; };
+		38758B89222059A6005FBBE8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		38758B9D222059E6005FBBE8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		38758BA12220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-App-iPhone-60x45@2x.png"; sourceTree = "<group>"; };
+		38758BA22220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-App-iPhone-60x45@3x.png"; sourceTree = "<group>"; };
+		38758BA32220694F005FBBE8 /* Icon-Messages-App-iPadAir-67x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-App-iPadAir-67x50@2x.png"; sourceTree = "<group>"; };
+		38758BA42220694F005FBBE8 /* Icon-Messages-Transcript-32x24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-Transcript-32x24@2x.png"; sourceTree = "<group>"; };
+		38758BA52220694F005FBBE8 /* Icon-Settings-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Settings-29x29@2x.png"; sourceTree = "<group>"; };
+		38758BA62220694F005FBBE8 /* Icon-Messages-app-27x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-app-27x20@3x.png"; sourceTree = "<group>"; };
+		38758BA72220694F005FBBE8 /* Icon-Settings-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Settings-29x29@3x.png"; sourceTree = "<group>"; };
+		38758BA82220694F005FBBE8 /* Icon-App-iTunes-1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-iTunes-1024x1024.png"; sourceTree = "<group>"; };
+		38758BA92220694F005FBBE8 /* Icon-Messages-App-iPadAir-74x55@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-App-iPadAir-74x55@2x.png"; sourceTree = "<group>"; };
+		38758BAA2220694F005FBBE8 /* Icon-Messages-AppStore-1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-AppStore-1024x768.png"; sourceTree = "<group>"; };
+		38758BAB2220694F005FBBE8 /* Icon-Messages-Transcript-32x24@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-Transcript-32x24@3x.png"; sourceTree = "<group>"; };
+		38758BAC2220694F005FBBE8 /* Icon-Messages-App-27x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Messages-App-27x20@2x.png"; sourceTree = "<group>"; };
+		69A7AF91CD38C6C80D9DC5A5 /* Pods-BattleBombersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersTests.debug.xcconfig"; path = "Target Support Files/Pods-BattleBombersTests/Pods-BattleBombersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8431561A8BCDFC293149EB74 /* Pods-BattleBombersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersTests.release.xcconfig"; path = "Target Support Files/Pods-BattleBombersTests/Pods-BattleBombersTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0894B196C409E7746CFB9EC /* Pods-BattleBombersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersUITests.release.xcconfig"; path = "Target Support Files/Pods-BattleBombersUITests/Pods-BattleBombersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A684A034377B2180C14DE2A0 /* Pods_BattleBombersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBombersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B534F4436ADE3A38B0671A60 /* Pods-BattleBombersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersUITests.debug.xcconfig"; path = "Target Support Files/Pods-BattleBombersUITests/Pods-BattleBombersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7457FEE7F16E411C3D460CB /* Pods-BattleBombersMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersMessage.debug.xcconfig"; path = "Target Support Files/Pods-BattleBombersMessage/Pods-BattleBombersMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		CF561DDF2B2F25AD8606B967 /* Pods-BattleBombersMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombersMessage.release.xcconfig"; path = "Target Support Files/Pods-BattleBombersMessage/Pods-BattleBombersMessage.release.xcconfig"; sourceTree = "<group>"; };
+		D1236662603CFA16C1871D5C /* Pods_BattleBombersMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBombersMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D983BFED48028F66367277A3 /* Pods-BattleBombers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBombers.release.xcconfig"; path = "Target Support Files/Pods-BattleBombers/Pods-BattleBombers.release.xcconfig"; sourceTree = "<group>"; };
+		F02A35A855F0A031739E1E6B /* Pods_BattleBombers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBombers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38758AD1221F8FC8005FBBE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3022315CB99B00F4FB287B13 /* Pods_BattleBombers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AE5221F8FC9005FBBE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5DB9F94195C4CA7C0C997B /* Pods_BattleBombersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AF0221F8FC9005FBBE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B192993EA8E60C1FA936C8C /* Pods_BattleBombersUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758B6322205685005FBBE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758B6822205685005FBBE8 /* Messages.framework in Frameworks */,
+				56C12A55E0B08D2B9678D9B8 /* Pods_BattleBombersMessage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38758ACB221F8FC8005FBBE8 = {
+			isa = PBXGroup;
+			children = (
+				38758BA022206940005FBBE8 /* Icons */,
+				38758AD6221F8FC8005FBBE8 /* BattleBombers */,
+				38758AEB221F8FC9005FBBE8 /* BattleBombersTests */,
+				38758AF6221F8FC9005FBBE8 /* BattleBombersUITests */,
+				38758B6922205685005FBBE8 /* BattleBombersMessage */,
+				38758AD5221F8FC8005FBBE8 /* Products */,
+				5C25E88A5F0278EE4EA653F8 /* Pods */,
+				93DE20339CE5A0800A2FAD25 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38758AD5221F8FC8005FBBE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38758AD4221F8FC8005FBBE8 /* BattleBombers.app */,
+				38758AE8221F8FC9005FBBE8 /* BattleBombersTests.xctest */,
+				38758AF3221F8FC9005FBBE8 /* BattleBombersUITests.xctest */,
+				38758B6622205685005FBBE8 /* BattleBombersMessage.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38758AD6221F8FC8005FBBE8 /* BattleBombers */ = {
+			isa = PBXGroup;
+			children = (
+				38758B882220573B005FBBE8 /* BattleBombers.entitlements */,
+				38758B23221F92E9005FBBE8 /* src */,
+				38758B05221F92C7005FBBE8 /* helpers */,
+				38758AD7221F8FC8005FBBE8 /* AppDelegate.swift */,
+				38758AD9221F8FC8005FBBE8 /* ViewController.swift */,
+				38758ADB221F8FC8005FBBE8 /* Main.storyboard */,
+				38758ADE221F8FC9005FBBE8 /* Assets.xcassets */,
+				38758AE0221F8FC9005FBBE8 /* LaunchScreen.storyboard */,
+				38758AE3221F8FC9005FBBE8 /* Info.plist */,
+			);
+			path = BattleBombers;
+			sourceTree = "<group>";
+		};
+		38758AEB221F8FC9005FBBE8 /* BattleBombersTests */ = {
+			isa = PBXGroup;
+			children = (
+				38758AEC221F8FC9005FBBE8 /* BattleBombersTests.swift */,
+				38758AEE221F8FC9005FBBE8 /* Info.plist */,
+			);
+			path = BattleBombersTests;
+			sourceTree = "<group>";
+		};
+		38758AF6221F8FC9005FBBE8 /* BattleBombersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38758AF7221F8FC9005FBBE8 /* BattleBombersUITests.swift */,
+				38758AF9221F8FC9005FBBE8 /* Info.plist */,
+			);
+			path = BattleBombersUITests;
+			sourceTree = "<group>";
+		};
+		38758B05221F92C7005FBBE8 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38758B45221FBB19005FBBE8 /* EtherWalletKit */,
+				38758B43221F9E4B005FBBE8 /* KeystoreHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		38758B23221F92E9005FBBE8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				38758B24221F92E9005FBBE8 /* plot_plant.png */,
+				38758B25221F92E9005FBBE8 /* plot_hit.png */,
+				38758B26221F92E9005FBBE8 /* bomb.png */,
+				38758B27221F92E9005FBBE8 /* plot_blank.png */,
+				38758B28221F92E9005FBBE8 /* explosion */,
+				38758B33221F92E9005FBBE8 /* plot_miss.png */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		38758B28221F92E9005FBBE8 /* explosion */ = {
+			isa = PBXGroup;
+			children = (
+				38758B29221F92E9005FBBE8 /* 8.png */,
+				38758B2A221F92E9005FBBE8 /* 9.png */,
+				38758B2B221F92E9005FBBE8 /* 4.png */,
+				38758B2C221F92E9005FBBE8 /* 5.png */,
+				38758B2D221F92E9005FBBE8 /* 7.png */,
+				38758B2E221F92E9005FBBE8 /* 6.png */,
+				38758B2F221F92E9005FBBE8 /* 2.png */,
+				38758B30221F92E9005FBBE8 /* 3.png */,
+				38758B31221F92E9005FBBE8 /* 1.png */,
+				38758B32221F92E9005FBBE8 /* 0.png */,
+			);
+			path = explosion;
+			sourceTree = "<group>";
+		};
+		38758B45221FBB19005FBBE8 /* EtherWalletKit */ = {
+			isa = PBXGroup;
+			children = (
+				38758B46221FBB19005FBBE8 /* Wallet */,
+				38758B50221FBB19005FBBE8 /* Structure */,
+			);
+			path = EtherWalletKit;
+			sourceTree = "<group>";
+		};
+		38758B46221FBB19005FBBE8 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				38758B47221FBB19005FBBE8 /* WalletError.swift */,
+				38758B48221FBB19005FBBE8 /* EtherWalletTestnets.swift */,
+				38758B49221FBB19005FBBE8 /* EtherWallet+Util.swift */,
+				38758B4A221FBB19005FBBE8 /* EtherWallet+Balance.swift */,
+				38758B4B221FBB19005FBBE8 /* EtherWallet+Transaction.swift */,
+				38758B4C221FBB19005FBBE8 /* EtherWallet+Info.swift */,
+				38758B4D221FBB19005FBBE8 /* EtherWallet.swift */,
+				38758B4E221FBB19005FBBE8 /* EtherWallet+History.swift */,
+				38758B4F221FBB19005FBBE8 /* EtherWallet+Account.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		38758B50221FBB19005FBBE8 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				38758B51221FBB19005FBBE8 /* TransactionData.swift */,
+				38758B52221FBB19005FBBE8 /* EthplorerAPIResponse.swift */,
+				38758B53221FBB19005FBBE8 /* GasStationAPIResponse.swift */,
+				38758B54221FBB19005FBBE8 /* EtherscanAPIResponse.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		38758B6922205685005FBBE8 /* BattleBombersMessage */ = {
+			isa = PBXGroup;
+			children = (
+				38758B8722205736005FBBE8 /* BattleBombersMessage.entitlements */,
+				38758B6C22205685005FBBE8 /* MainInterface.storyboard */,
+				38758B6F22205686005FBBE8 /* Assets.xcassets */,
+				38758B7122205686005FBBE8 /* Info.plist */,
+				38758B9D222059E6005FBBE8 /* GameScene.sks */,
+				38758B6A22205685005FBBE8 /* MessagesViewController.swift */,
+				38758B89222059A6005FBBE8 /* GameScene.swift */,
+			);
+			path = BattleBombersMessage;
+			sourceTree = "<group>";
+		};
+		38758BA022206940005FBBE8 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				38758BA82220694F005FBBE8 /* Icon-App-iTunes-1024x1024.png */,
+				38758BAC2220694F005FBBE8 /* Icon-Messages-App-27x20@2x.png */,
+				38758BA62220694F005FBBE8 /* Icon-Messages-app-27x20@3x.png */,
+				38758BA32220694F005FBBE8 /* Icon-Messages-App-iPadAir-67x50@2x.png */,
+				38758BA92220694F005FBBE8 /* Icon-Messages-App-iPadAir-74x55@2x.png */,
+				38758BA12220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@2x.png */,
+				38758BA22220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@3x.png */,
+				38758BAA2220694F005FBBE8 /* Icon-Messages-AppStore-1024x768.png */,
+				38758BA42220694F005FBBE8 /* Icon-Messages-Transcript-32x24@2x.png */,
+				38758BAB2220694F005FBBE8 /* Icon-Messages-Transcript-32x24@3x.png */,
+				38758BA52220694F005FBBE8 /* Icon-Settings-29x29@2x.png */,
+				38758BA72220694F005FBBE8 /* Icon-Settings-29x29@3x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		5C25E88A5F0278EE4EA653F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FA100BF23889ABBC67A7013 /* Pods-BattleBombers.debug.xcconfig */,
+				D983BFED48028F66367277A3 /* Pods-BattleBombers.release.xcconfig */,
+				69A7AF91CD38C6C80D9DC5A5 /* Pods-BattleBombersTests.debug.xcconfig */,
+				8431561A8BCDFC293149EB74 /* Pods-BattleBombersTests.release.xcconfig */,
+				B534F4436ADE3A38B0671A60 /* Pods-BattleBombersUITests.debug.xcconfig */,
+				A0894B196C409E7746CFB9EC /* Pods-BattleBombersUITests.release.xcconfig */,
+				C7457FEE7F16E411C3D460CB /* Pods-BattleBombersMessage.debug.xcconfig */,
+				CF561DDF2B2F25AD8606B967 /* Pods-BattleBombersMessage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93DE20339CE5A0800A2FAD25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F02A35A855F0A031739E1E6B /* Pods_BattleBombers.framework */,
+				2F019F75814781E4F8243F5A /* Pods_BattleBombersTests.framework */,
+				A684A034377B2180C14DE2A0 /* Pods_BattleBombersUITests.framework */,
+				38758B6722205685005FBBE8 /* Messages.framework */,
+				D1236662603CFA16C1871D5C /* Pods_BattleBombersMessage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38758AD3221F8FC8005FBBE8 /* BattleBombers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38758AFC221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombers" */;
+			buildPhases = (
+				537F75717BE527F27B4F5439 /* [CP] Check Pods Manifest.lock */,
+				38758AD0221F8FC8005FBBE8 /* Sources */,
+				38758AD1221F8FC8005FBBE8 /* Frameworks */,
+				38758AD2221F8FC8005FBBE8 /* Resources */,
+				3FAFA8A00695BD900C1F196F /* [CP] Embed Pods Frameworks */,
+				38758B7822205686005FBBE8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38758B7322205686005FBBE8 /* PBXTargetDependency */,
+			);
+			name = BattleBombers;
+			productName = BattleBombers;
+			productReference = 38758AD4221F8FC8005FBBE8 /* BattleBombers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38758AE7221F8FC9005FBBE8 /* BattleBombersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38758AFF221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersTests" */;
+			buildPhases = (
+				CC85C94A2562D94B79622E4B /* [CP] Check Pods Manifest.lock */,
+				38758AE4221F8FC9005FBBE8 /* Sources */,
+				38758AE5221F8FC9005FBBE8 /* Frameworks */,
+				38758AE6221F8FC9005FBBE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38758AEA221F8FC9005FBBE8 /* PBXTargetDependency */,
+			);
+			name = BattleBombersTests;
+			productName = BattleBombersTests;
+			productReference = 38758AE8221F8FC9005FBBE8 /* BattleBombersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38758AF2221F8FC9005FBBE8 /* BattleBombersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38758B02221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersUITests" */;
+			buildPhases = (
+				E09B8C9B4F196D8D7A930AE5 /* [CP] Check Pods Manifest.lock */,
+				38758AEF221F8FC9005FBBE8 /* Sources */,
+				38758AF0221F8FC9005FBBE8 /* Frameworks */,
+				38758AF1221F8FC9005FBBE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38758AF5221F8FC9005FBBE8 /* PBXTargetDependency */,
+			);
+			name = BattleBombersUITests;
+			productName = BattleBombersUITests;
+			productReference = 38758AF3221F8FC9005FBBE8 /* BattleBombersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		38758B6522205685005FBBE8 /* BattleBombersMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38758B7722205686005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersMessage" */;
+			buildPhases = (
+				EBC11A00C9404C34D4161545 /* [CP] Check Pods Manifest.lock */,
+				38758B6222205685005FBBE8 /* Sources */,
+				38758B6322205685005FBBE8 /* Frameworks */,
+				38758B6422205685005FBBE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BattleBombersMessage;
+			productName = BattleBombersMessage;
+			productReference = 38758B6622205685005FBBE8 /* BattleBombersMessage.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38758ACC221F8FC8005FBBE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Franky Aguilar";
+				TargetAttributes = {
+					38758AD3221F8FC8005FBBE8 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					38758AE7221F8FC9005FBBE8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 38758AD3221F8FC8005FBBE8;
+					};
+					38758AF2221F8FC9005FBBE8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 38758AD3221F8FC8005FBBE8;
+					};
+					38758B6522205685005FBBE8 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 38758ACF221F8FC8005FBBE8 /* Build configuration list for PBXProject "BattleBombers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38758ACB221F8FC8005FBBE8;
+			productRefGroup = 38758AD5221F8FC8005FBBE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38758AD3221F8FC8005FBBE8 /* BattleBombers */,
+				38758AE7221F8FC9005FBBE8 /* BattleBombersTests */,
+				38758AF2221F8FC9005FBBE8 /* BattleBombersUITests */,
+				38758B6522205685005FBBE8 /* BattleBombersMessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38758AD2221F8FC8005FBBE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758B41221F92E9005FBBE8 /* 0.png in Resources */,
+				38758B3F221F92E9005FBBE8 /* 3.png in Resources */,
+				38758B3B221F92E9005FBBE8 /* 5.png in Resources */,
+				38758B38221F92E9005FBBE8 /* 8.png in Resources */,
+				38758B3E221F92E9005FBBE8 /* 2.png in Resources */,
+				38758AE2221F8FC9005FBBE8 /* LaunchScreen.storyboard in Resources */,
+				38758B3C221F92E9005FBBE8 /* 7.png in Resources */,
+				38758ADF221F8FC9005FBBE8 /* Assets.xcassets in Resources */,
+				38758B39221F92E9005FBBE8 /* 9.png in Resources */,
+				38758B3D221F92E9005FBBE8 /* 6.png in Resources */,
+				38758B40221F92E9005FBBE8 /* 1.png in Resources */,
+				38758B37221F92E9005FBBE8 /* plot_blank.png in Resources */,
+				38758B42221F92E9005FBBE8 /* plot_miss.png in Resources */,
+				38758B34221F92E9005FBBE8 /* plot_plant.png in Resources */,
+				38758B35221F92E9005FBBE8 /* plot_hit.png in Resources */,
+				38758ADD221F8FC8005FBBE8 /* Main.storyboard in Resources */,
+				38758B3A221F92E9005FBBE8 /* 4.png in Resources */,
+				38758B36221F92E9005FBBE8 /* bomb.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AE6221F8FC9005FBBE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AF1221F8FC9005FBBE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758B6422205685005FBBE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758BB22220694F005FBBE8 /* Icon-Messages-app-27x20@3x.png in Resources */,
+				38758BAD2220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@2x.png in Resources */,
+				38758BB32220694F005FBBE8 /* Icon-Settings-29x29@3x.png in Resources */,
+				38758B99222059BA005FBBE8 /* 0.png in Resources */,
+				38758B97222059BA005FBBE8 /* 3.png in Resources */,
+				38758B93222059BA005FBBE8 /* 5.png in Resources */,
+				38758B90222059BA005FBBE8 /* 8.png in Resources */,
+				38758B96222059BA005FBBE8 /* 2.png in Resources */,
+				38758B7022205686005FBBE8 /* Assets.xcassets in Resources */,
+				38758BAE2220694F005FBBE8 /* Icon-Messages-App-iPhone-60x45@3x.png in Resources */,
+				38758B94222059BA005FBBE8 /* 7.png in Resources */,
+				38758BB82220694F005FBBE8 /* Icon-Messages-App-27x20@2x.png in Resources */,
+				38758BB12220694F005FBBE8 /* Icon-Settings-29x29@2x.png in Resources */,
+				38758BB62220694F005FBBE8 /* Icon-Messages-AppStore-1024x768.png in Resources */,
+				38758B8F222059B6005FBBE8 /* plot_miss.png in Resources */,
+				38758B91222059BA005FBBE8 /* 9.png in Resources */,
+				38758B95222059BA005FBBE8 /* 6.png in Resources */,
+				38758B98222059BA005FBBE8 /* 1.png in Resources */,
+				38758BB72220694F005FBBE8 /* Icon-Messages-Transcript-32x24@3x.png in Resources */,
+				38758B8D222059B6005FBBE8 /* bomb.png in Resources */,
+				38758B8B222059B6005FBBE8 /* plot_plant.png in Resources */,
+				38758BB02220694F005FBBE8 /* Icon-Messages-Transcript-32x24@2x.png in Resources */,
+				38758BB42220694F005FBBE8 /* Icon-App-iTunes-1024x1024.png in Resources */,
+				38758BAF2220694F005FBBE8 /* Icon-Messages-App-iPadAir-67x50@2x.png in Resources */,
+				38758B8E222059B6005FBBE8 /* plot_blank.png in Resources */,
+				38758B8C222059B6005FBBE8 /* plot_hit.png in Resources */,
+				38758BB52220694F005FBBE8 /* Icon-Messages-App-iPadAir-74x55@2x.png in Resources */,
+				38758B92222059BA005FBBE8 /* 4.png in Resources */,
+				38758B9F22205B9C005FBBE8 /* GameScene.sks in Resources */,
+				38758B6E22205685005FBBE8 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FAFA8A00695BD900C1F196F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BattleBombers/Pods-BattleBombers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/EthereumABI/EthereumABI.framework",
+				"${BUILT_PRODUCTS_DIR}/EthereumAddress/EthereumAddress.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRLP/SwiftRLP.framework",
+				"${BUILT_PRODUCTS_DIR}/TrustWalletCore/TrustWalletCore.framework",
+				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1_swift/secp256k1_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/web3swift/Web3swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumABI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumAddress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRLP.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrustWalletCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Web3swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BattleBombers/Pods-BattleBombers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		537F75717BE527F27B4F5439 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleBombers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC85C94A2562D94B79622E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleBombersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E09B8C9B4F196D8D7A930AE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleBombersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC11A00C9404C34D4161545 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleBombersMessage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38758AD0221F8FC8005FBBE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758ADA221F8FC8005FBBE8 /* ViewController.swift in Sources */,
+				38758B5E221FBB19005FBBE8 /* TransactionData.swift in Sources */,
+				38758B5D221FBB19005FBBE8 /* EtherWallet+Account.swift in Sources */,
+				38758B5A221FBB19005FBBE8 /* EtherWallet+Info.swift in Sources */,
+				38758B56221FBB19005FBBE8 /* EtherWalletTestnets.swift in Sources */,
+				38758B59221FBB19005FBBE8 /* EtherWallet+Transaction.swift in Sources */,
+				38758B44221F9E4B005FBBE8 /* KeystoreHelper.swift in Sources */,
+				38758B5F221FBB19005FBBE8 /* EthplorerAPIResponse.swift in Sources */,
+				38758B5B221FBB19005FBBE8 /* EtherWallet.swift in Sources */,
+				38758AD8221F8FC8005FBBE8 /* AppDelegate.swift in Sources */,
+				38758B58221FBB19005FBBE8 /* EtherWallet+Balance.swift in Sources */,
+				38758B61221FBB19005FBBE8 /* EtherscanAPIResponse.swift in Sources */,
+				38758B60221FBB19005FBBE8 /* GasStationAPIResponse.swift in Sources */,
+				38758B5C221FBB19005FBBE8 /* EtherWallet+History.swift in Sources */,
+				38758B55221FBB19005FBBE8 /* WalletError.swift in Sources */,
+				38758B57221FBB19005FBBE8 /* EtherWallet+Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AE4221F8FC9005FBBE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758AED221F8FC9005FBBE8 /* BattleBombersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758AEF221F8FC9005FBBE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758AF8221F8FC9005FBBE8 /* BattleBombersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38758B6222205685005FBBE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38758B8422205694005FBBE8 /* GasStationAPIResponse.swift in Sources */,
+				38758B8222205694005FBBE8 /* TransactionData.swift in Sources */,
+				38758B9E22205B9A005FBBE8 /* GameScene.swift in Sources */,
+				38758B6B22205685005FBBE8 /* MessagesViewController.swift in Sources */,
+				38758B8122205690005FBBE8 /* EtherWallet+Account.swift in Sources */,
+				38758B7922205690005FBBE8 /* WalletError.swift in Sources */,
+				38758B7D22205690005FBBE8 /* EtherWallet+Transaction.swift in Sources */,
+				38758B8622205694005FBBE8 /* KeystoreHelper.swift in Sources */,
+				38758B7E22205690005FBBE8 /* EtherWallet+Info.swift in Sources */,
+				38758B8522205694005FBBE8 /* EtherscanAPIResponse.swift in Sources */,
+				38758B7A22205690005FBBE8 /* EtherWalletTestnets.swift in Sources */,
+				38758B7F22205690005FBBE8 /* EtherWallet.swift in Sources */,
+				38758B7C22205690005FBBE8 /* EtherWallet+Balance.swift in Sources */,
+				38758B8022205690005FBBE8 /* EtherWallet+History.swift in Sources */,
+				38758B7B22205690005FBBE8 /* EtherWallet+Util.swift in Sources */,
+				38758B8322205694005FBBE8 /* EthplorerAPIResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38758AEA221F8FC9005FBBE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38758AD3221F8FC8005FBBE8 /* BattleBombers */;
+			targetProxy = 38758AE9221F8FC9005FBBE8 /* PBXContainerItemProxy */;
+		};
+		38758AF5221F8FC9005FBBE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38758AD3221F8FC8005FBBE8 /* BattleBombers */;
+			targetProxy = 38758AF4221F8FC9005FBBE8 /* PBXContainerItemProxy */;
+		};
+		38758B7322205686005FBBE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38758B6522205685005FBBE8 /* BattleBombersMessage */;
+			targetProxy = 38758B7222205686005FBBE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38758ADB221F8FC8005FBBE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38758ADC221F8FC8005FBBE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38758AE0221F8FC9005FBBE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38758AE1221F8FC9005FBBE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		38758B6C22205685005FBBE8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38758B6D22205685005FBBE8 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38758AFA221F8FC9005FBBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38758AFB221F8FC9005FBBE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38758AFD221F8FC9005FBBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA100BF23889ABBC67A7013 /* Pods-BattleBombers.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BattleBombers/BattleBombers.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		38758AFE221F8FC9005FBBE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D983BFED48028F66367277A3 /* Pods-BattleBombers.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BattleBombers/BattleBombers.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		38758B00221F8FC9005FBBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69A7AF91CD38C6C80D9DC5A5 /* Pods-BattleBombersTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleBombers.app/BattleBombers";
+			};
+			name = Debug;
+		};
+		38758B01221F8FC9005FBBE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8431561A8BCDFC293149EB74 /* Pods-BattleBombersTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleBombers.app/BattleBombers";
+			};
+			name = Release;
+		};
+		38758B03221F8FC9005FBBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B534F4436ADE3A38B0671A60 /* Pods-BattleBombersUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BattleBombers;
+			};
+			name = Debug;
+		};
+		38758B04221F8FC9005FBBE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0894B196C409E7746CFB9EC /* Pods-BattleBombersUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BattleBombers;
+			};
+			name = Release;
+		};
+		38758B7522205686005FBBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7457FEE7F16E411C3D460CB /* Pods-BattleBombersMessage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = BattleBombersMessage/BattleBombersMessage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombers.BattleBombersMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38758B7622205686005FBBE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF561DDF2B2F25AD8606B967 /* Pods-BattleBombersMessage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = BattleBombersMessage/BattleBombersMessage.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2VDMMX4A7;
+				INFOPLIST_FILE = BattleBombersMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frankyaguilar.BattleBombers.BattleBombersMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38758ACF221F8FC8005FBBE8 /* Build configuration list for PBXProject "BattleBombers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38758AFA221F8FC9005FBBE8 /* Debug */,
+				38758AFB221F8FC9005FBBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38758AFC221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38758AFD221F8FC9005FBBE8 /* Debug */,
+				38758AFE221F8FC9005FBBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38758AFF221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38758B00221F8FC9005FBBE8 /* Debug */,
+				38758B01221F8FC9005FBBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38758B02221F8FC9005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38758B03221F8FC9005FBBE8 /* Debug */,
+				38758B04221F8FC9005FBBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38758B7722205686005FBBE8 /* Build configuration list for PBXNativeTarget "BattleBombersMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38758B7522205686005FBBE8 /* Debug */,
+				38758B7622205686005FBBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38758ACC221F8FC8005FBBE8 /* Project object */;
+}

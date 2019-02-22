@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="BattleBombersMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
+                                <rect key="frame" x="48" y="10" width="252" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m4g-vi-eEO">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LmY-Te-TjC"/>
+                                    <constraint firstAttribute="width" constant="40" id="VXm-n2-ss9"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4O-zu-ZH4" customClass="SKView">
+                                <rect key="frame" x="0.0" y="40" width="320" height="488"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idv-ko-aZA">
+                                <rect key="frame" x="20" y="44.5" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-IH-nzq">
+                                <rect key="frame" x="0.0" y="40" width="320" height="488"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pt-68-dU4">
+                                        <rect key="frame" x="20" y="219" width="280" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WMO-Y2-MGb"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="iba_gameActionWithSender:" destination="ObA-dk-sSI" eventType="touchUpInside" id="wfy-rR-FmU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4pt-68-dU4" firstAttribute="centerY" secondItem="Hdc-IH-nzq" secondAttribute="centerY" id="RFe-K0-Ed7"/>
+                                    <constraint firstAttribute="trailing" secondItem="4pt-68-dU4" secondAttribute="trailing" constant="20" id="jid-Kc-2OS"/>
+                                    <constraint firstItem="4pt-68-dU4" firstAttribute="leading" secondItem="Hdc-IH-nzq" secondAttribute="leading" constant="20" id="pvO-Zr-EaN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d4O-zu-ZH4" firstAttribute="top" secondItem="m4g-vi-eEO" secondAttribute="bottom" id="6go-Q5-Yro"/>
+                            <constraint firstItem="Hdc-IH-nzq" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="F5p-8t-7c9"/>
+                            <constraint firstItem="Hdc-IH-nzq" firstAttribute="top" secondItem="m4g-vi-eEO" secondAttribute="bottom" id="IWC-9a-xLe"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="Hdc-IH-nzq" secondAttribute="bottom" id="JdF-EH-bX4"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="Hdc-IH-nzq" secondAttribute="trailing" id="JyO-ip-L7r"/>
+                            <constraint firstItem="idv-ko-aZA" firstAttribute="top" secondItem="d1e-fi-ked" secondAttribute="bottom" constant="20" id="L2N-MR-337"/>
+                            <constraint firstAttribute="trailing" secondItem="d4O-zu-ZH4" secondAttribute="trailing" id="MBR-gg-EXc"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="leading" secondItem="m4g-vi-eEO" secondAttribute="trailing" constant="8" id="V2v-6B-AoU"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="d1e-fi-ked" secondAttribute="trailing" constant="20" id="YVn-FQ-tBM"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="10" id="ZWd-2J-DsS"/>
+                            <constraint firstItem="m4g-vi-eEO" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="aPo-hT-0Pf"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="idv-ko-aZA" secondAttribute="trailing" constant="20" id="lti-w0-acT"/>
+                            <constraint firstItem="m4g-vi-eEO" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="ogh-ba-wxt"/>
+                            <constraint firstItem="idv-ko-aZA" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="20" id="rLd-mf-OyB"/>
+                            <constraint firstItem="d4O-zu-ZH4" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="sok-9t-kMy"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="d4O-zu-ZH4" secondAttribute="bottom" id="uef-F7-A1H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="ibo_actionButton" destination="4pt-68-dU4" id="91T-ni-lFi"/>
+                        <outlet property="ibo_actionView" destination="Hdc-IH-nzq" id="5vo-Eh-bIR"/>
+                        <outlet property="ibo_gameInstructions" destination="idv-ko-aZA" id="jsA-e1-UJI"/>
+                        <outlet property="ibo_gameScene" destination="d4O-zu-ZH4" id="4np-OK-HGr"/>
+                        <outlet property="ibo_publicKey" destination="d1e-fi-ked" id="ZFE-Xi-kIE"/>
+                        <outlet property="ibo_qrCode" destination="m4g-vi-eEO" id="Xyp-eg-DCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
+        </scene>
+    </scenes>
+</document>

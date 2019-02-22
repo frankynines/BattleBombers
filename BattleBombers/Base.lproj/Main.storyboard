@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BattleBombers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiT-0z-a6C">
+                                <rect key="frame" x="100" y="81" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MiT-0z-a6C" secondAttribute="height" multiplier="1:1" id="Bcn-HO-P3i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdx-VE-R1s">
+                                <rect key="frame" x="166.5" y="40" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4f-gl-8AZ">
+                                <rect key="frame" x="20" y="276" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2b-O9-bcC">
+                                <rect key="frame" x="153" y="317" width="69" height="30"/>
+                                <state key="normal" title="Test Send"/>
+                                <connections>
+                                    <action selector="iba_sendETH" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrU-aA-ZAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MiT-0z-a6C" secondAttribute="trailing" constant="100" id="Crf-yQ-AZf"/>
+                            <constraint firstItem="MiT-0z-a6C" firstAttribute="top" secondItem="zdx-VE-R1s" secondAttribute="bottom" constant="20" id="DsT-lD-iZJ"/>
+                            <constraint firstItem="zdx-VE-R1s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EFp-r8-Hd4"/>
+                            <constraint firstItem="v2b-O9-bcC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PH5-66-Kqj"/>
+                            <constraint firstItem="a4f-gl-8AZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RZt-Yw-j4p"/>
+                            <constraint firstItem="zdx-VE-R1s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCm-Mz-L9z"/>
+                            <constraint firstItem="a4f-gl-8AZ" firstAttribute="top" secondItem="MiT-0z-a6C" secondAttribute="bottom" constant="20" id="ZBe-Uf-o8q"/>
+                            <constraint firstItem="v2b-O9-bcC" firstAttribute="top" secondItem="a4f-gl-8AZ" secondAttribute="bottom" constant="20" id="a4v-vB-2HC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a4f-gl-8AZ" secondAttribute="trailing" constant="20" id="net-Fo-w2W"/>
+                            <constraint firstItem="MiT-0z-a6C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="r7m-gs-o7X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ibo_balance" destination="zdx-VE-R1s" id="hSP-Fi-2R1"/>
+                        <outlet property="ibo_publicKey" destination="a4f-gl-8AZ" id="Xn7-77-WkA"/>
+                        <outlet property="ibo_qrImage" destination="MiT-0z-a6C" id="3KU-sN-jRE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
