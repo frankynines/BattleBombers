@@ -11,3 +11,6 @@ Clone Repo
 Run -pod init
 Build and Run
 
+
+![Screen Shot](https://github.com/FrankyAguilar/BattleBombers/blob/master/BattleBombers/QmaV4VHxEctn9RNABPKiNYQ9b3xSPWvW7ovYpvPaPT2LN8.jpeg?raw=true)
+
